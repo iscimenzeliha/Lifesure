@@ -71,14 +71,14 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 
 ### ⚙️ Admin Paneli
 
-![Admin Paneli 1](.Images/Ekran_görüntüsü_2025-08-16_184926.png)
-![Admin Paneli 2](Images/Ekran_görüntüsü_2025-08-16_185543.png)
-![Admin Paneli 3](Images/Ekran_görüntüsü_2025-08-16_185656.png)
-![Admin Paneli 4](Images/Ekran_görüntüsü_2025-08-16_191718.png)
-![Admin Paneli 5](Images/Ekran_görüntüsü_2025-08-16_191803.png)
-![Admin Paneli 6](Images/Ekran_görüntüsü_2025-08-16_191919.png)
-![Admin Paneli 7](Images/Ekran_görüntüsü_2025-08-16_192001.png)
-![Admin Paneli 8](Images/Ekran_görüntüsü_2025-08-16_192417.png)
+![Admin Paneli 1](.Images/AdminPanel1.png)
+![Admin Paneli 2](.Images/AdminPanel2.png)
+![Admin Paneli 3](.Images/AdminPanel4.png)
+![Admin Paneli 4](.Images/AdminPanel5.png)
+![Admin Paneli 5](.Images/AdminPanel6.png)
+![Admin Paneli 6](.Images/AdminPanel7.png)
+![Admin Paneli 7](.Images/AdminPanel9.png)
+
 
 ### ⚙️ UI
 ![UI 1](Images/Ekran_görüntüsü_2025-08-22_190148.png)
