@@ -48,7 +48,7 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 - Admin paneline gerek kalmadan doğrudan arayüzde gösterilir  
 
 ### 🌍 Çok Dilli Altyapı
-- 🇹🇷 Türkçe ve 🇬🇧 İngilizce dil desteği  
+-  Türkçe ve  İngilizce dil desteği  
 - Tüm içerikler .resx dosyalarıyla kontrol edilir  
 - Dil seçimi, kullanıcı tarafından arayüzden yapılabilir  
 - Controller ve View seviyesinde dinamik olarak yönetilir  
@@ -66,6 +66,6 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 | ✨ jQuery UI | Animasyon ve etkileşimler |
 | 💬 ChatGPT API | AI ile cevap üretimi (RapidAPI) |
 | 🖼️ Hugging Face API | Metne göre görsel üretimi |
-| 📲 Instagram & Twitter API | Takipçi bilgisi çekme (RapidAPI) |
+| 📲 Instagram  API | Takipçi bilgisi çekme (RapidAPI) |
 | 👨‍💻 C# | Backend geliştirme dili |
 
