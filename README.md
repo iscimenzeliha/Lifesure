@@ -7,8 +7,8 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 ## ⚙️ Yönetim Paneli Özellikleri
 
 ### 🗣️ AI Destekli Soru-Cevap Sistemi (FAQ)
-- 🚫 Sistem soru üretmez  
-- ✅ Admin kendi sorusunu yazar, sistem yalnızca cevap üretir  
+- ✅ Sistem verilen konuya göre soru oluşturur  
+- ✅ Sistem soruya göre cevap üretir  
 - Soru, ChatGPT API (RapidAPI) üzerinden işlenir ve AI tarafından cevabı otomatik oluşturulur  
 - Admin onayıyla soru ve cevap veritabanına kaydedilir  
 - Sıkça Sorulan Sorular bölümü böylece dinamik şekilde oluşturulur  
