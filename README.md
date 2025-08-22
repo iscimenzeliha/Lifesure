@@ -81,7 +81,6 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 
 
 ### ⚙️ UI
-![UI 1](Images/UI1.png)
 ![UI 2](Images/UI2.png)
 ![UI 3](Images/UI3.png)
 ![UI 4](Images/UI4.png)
