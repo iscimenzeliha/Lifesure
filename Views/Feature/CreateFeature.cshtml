@@ -1,0 +1,33 @@
+﻿﻿@model Proje7MVC.Models.DataModels.Features
+
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Yeni Özellik Ekle</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Başlık</label>
+                            <input type="text" class="form-control" name="Title">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <input type="text" class="form-control" name="Description">
+                        </div>
+                        <div class="form-group">
+                            <label>Icon</label>
+                            <input type="text" class="form-control" name="Icon">
+                        </div>
+                        <button class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

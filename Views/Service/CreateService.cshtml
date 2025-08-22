@@ -1,0 +1,75 @@
+﻿@model Proje7MVC.Models.ViewModels.ServiceViewModel
+
+@{
+    ViewBag.Title = "Yeni Servis Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Servis Ekle</h2>
+
+@if (ViewBag.ApiError != null)
+{
+    <div class="alert alert-danger">@Html.Raw(ViewBag.ApiError)</div>
+}
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+}
+
+@using (Html.BeginForm("CreateService", "Service", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = 4 })
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Icon)
+        @Html.TextBoxFor(m => m.Icon, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Icon, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <button type="submit" name="action" value="generate" class="btn btn-info">Görselleri Üret</button>
+    </div>
+
+    if (Model.GeneratedImages != null && Model.GeneratedImages.Count > 0)
+    {
+        <h4>Üretilen Görseller</h4>
+        <div class="row">
+            @for (int i = 0; i < Model.GeneratedImages.Count; i++)
+            {
+                <div class="col-md-3 text-center mb-3">
+                    <img src="@Model.GeneratedImages[i]" class="img-thumbnail selectable-image" data-url="@Model.GeneratedImages[i]" style="cursor:pointer;" />
+                </div>
+            }
+        </div>
+        @Html.HiddenFor(m => m.SelectedImage)
+        <div class="form-group mt-3">
+            <button type="submit" name="action" value="save" class="btn btn-success">Seçilen Görseli Kaydet</button>
+        </div>
+    }
+
+}
+
+@section Scripts {
+    <script>
+        document.querySelectorAll(".selectable-image").forEach(img => {
+            img.addEventListener("click", function () {
+                document.querySelector('input[name="SelectedImage"]').value = this.getAttribute("data-url");
+                document.querySelectorAll(".selectable-image").forEach(i => i.style.border = "none");
+                this.style.border = "3px solid green";
+            });
+        });
+    </script>
+}

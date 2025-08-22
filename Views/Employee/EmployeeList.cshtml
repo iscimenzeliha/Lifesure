@@ -1,0 +1,51 @@
+﻿﻿@model List<Proje7MVC.Models.DataModels.Employees>
+@{
+    ViewBag.Title = "EmployeeList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Ekip Üyeleri</h3>
+<div class="row" id="basic-table">
+    <div class="col-12 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Adı</th>
+                                    <th>Soyadı</th>
+                                    <th>Meslek</th>
+                                    <th>Linkedin URL</th>
+                                    <th>Instagram URL</th>
+                                    <th>Image URL</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-bold-500">@item.EmployeeId</td>
+                                        <td class="text-bold-500">@item.Name</td>
+                                        <td class="text-bold-500">@item.Surname</td>
+                                        <td class="text-bold-500">@item.Profession</td>
+                                        <td class="text-bold-500">@item.LinkedinUrl</td>
+                                        <td class="text-bold-500">@item.InstagramUrl</td>
+                                        <td class="text-bold-500">@item.ImageUrl</td>
+                                        <td><a href="/Employee/DeleteEmployee/@item.EmployeeId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Employee/UpdateEmployee/@item.EmployeeId" class="btn btn-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Employee/CreateEmployee" class="btn btn-primary">Yeni Ekip Üyesi Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

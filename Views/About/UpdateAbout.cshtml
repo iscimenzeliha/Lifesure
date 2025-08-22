@@ -1,0 +1,78 @@
+﻿@model Proje7MVC.Models.DataModels.Abouts
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>GÜNCELLE</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.HiddenFor(m => m.AboutId)
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Title, "Başlık")
+                            @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Description, "Açıklama")
+                            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Point1, "Yetenek1")
+                            @Html.TextBoxFor(m => m.Point1, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Point1, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Point2, "Yetenek2")
+                            @Html.TextBoxFor(m => m.Point2, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Point2, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Point3, "Yetenek3")
+                            @Html.TextBoxFor(m => m.Point3, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Point3, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.InsurancePolicies)
+                            @Html.TextBoxFor(m => m.InsurancePolicies, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.InsurancePolicies, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.SkilledAgents)
+                            @Html.TextBoxFor(m => m.SkilledAgents, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.SkilledAgents, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.AwardsWON)
+                            @Html.TextBoxFor(m => m.AwardsWON, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.AwardsWON, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.TeamMembers)
+                            @Html.TextBoxFor(m => m.TeamMembers, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.TeamMembers, "", new { @class = "text-danger" })
+                        </div>
+
+                        <button class="btn btn-primary">Güncelle</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+﻿﻿@model  Proje7MVC.Models.DataModels.Contacts
+
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>GÜNCELLE</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form method="post">
+                        <input type="hidden" name="ContactId" value="@Model.ContactId" />
+                        <div class="form-group">
+                            <label>Adres</label>
+                            <input type="text" class="form-control" name="Address" value="@Model.Address">
+                        </div>
+                        <div class="form-group">
+                            <label>Mail</label>
+                            <input type="text" class="form-control" name="Mail" value="@Model.Mail">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefon</label>
+                            <input type="text" class="form-control" name="Telephone" value="@Model.Telephone">
+                        </div>                       
+                        <button class="btn btn-primary">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

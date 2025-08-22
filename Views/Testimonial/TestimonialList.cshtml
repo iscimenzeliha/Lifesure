@@ -1,0 +1,48 @@
+﻿﻿@model List<Proje7MVC.Models.DataModels.Testimonials>
+
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Referanslar</h3>
+<div class="row" id="basic-table">
+    <div class="col-12 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Adı Soyadı</th>
+                                    <th>Meslek</th>
+                                    <th>Açıklama</th>                         
+                                    <th>Image URL</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-bold-500">@item.TestimonialId</td>
+                                        <td class="text-bold-500">@item.NameSurname</td>
+                                        <td class="text-bold-500">@item.Profession</td>
+                                        <td class="text-bold-500">@item.Description</td>
+                                        <td class="text-bold-500">@item.ImageUrl</td>
+                                        <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Testimonial/CreateTestimonial" class="btn btn-primary">Yeni Referans Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿﻿@model  Proje7MVC.Models.DataModels.Employees
+
+@{
+    ViewBag.Title = "CreateEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Üye Ekle</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Adı</label>
+                            <input type="text" class="form-control" name="Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Soyadı</label>
+                            <input type="text" class="form-control" name="Surname">
+                        </div>
+                        <div class="form-group">
+                            <label>Meslek</label>
+                            <input type="text" class="form-control" name="Profession">
+                        </div>
+                        <div class="form-group">
+                            <label>	Linkedin URL</label>
+                            <input type="text" class="form-control" name="LinkedinUrl">
+                        </div>
+                        <div class="form-group">
+                            <label>Instagram URL</label>
+                            <input type="text" class="form-control" name="InstagramUrl">
+                        </div>
+                        <div class="form-group">
+                            <label>Image URL</label>
+                            <input type="text" class="form-control" name="ImageUrl">
+                        </div>
+                        <button class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

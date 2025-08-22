@@ -1,0 +1,39 @@
+﻿﻿@model  Proje7MVC.Models.DataModels.Testimonials
+
+@{
+    ViewBag.Title = "CreateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Yeni Üye Ekle</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form method="post">
+                        <div class="form-group">
+                            <label>Adı Soyadı</label>
+                            <input type="text" class="form-control" name="NameSurname">
+                        </div>
+                        <div class="form-group">
+                            <label>Meslek</label>
+                            <input type="text" class="form-control" name="Profession">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <input type="text" class="form-control" name="Description">
+                        </div>                  
+                        <div class="form-group">
+                            <label>Image URL</label>
+                            <input type="text" class="form-control" name="ImageUrl">
+                        </div>
+                        <button class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

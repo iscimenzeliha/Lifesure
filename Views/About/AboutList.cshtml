@@ -1,0 +1,60 @@
+﻿﻿@model List<Proje7MVC.Models.DataModels.Abouts>
+
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h3>Hakkında Sayfası</h3>
+<div class="row" id="basic-table">
+    <div class="col-12 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Yetenek1</th>
+                                    <th>Yetenek2</th>
+                                    <th>Yetenek3</th>
+                                    <th>Sigorta Poliçeleri</th>
+                                    <th>Uzman Temsilciler</th>
+                                    <th>Kazanılan Ödüller</th>
+                                    <th>Takım Üyeleri</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-bold-500">@item.AboutId</td>
+                                        <td class="text-bold-500">@item.Title</td>
+                                        <td class="text-bold-500">@item.Description</td>
+                                        <td class="text-bold-500">@item.Point1</td>
+                                        <td class="text-bold-500">@item.Point2</td>
+                                        <td class="text-bold-500">@item.Point3</td>
+                                        <td class="text-bold-500">@item.InsurancePolicies</td>
+                                        <td class="text-bold-500">@item.SkilledAgents</td>
+                                        <td class="text-bold-500">@item.AwardsWON</td>
+                                        <td class="text-bold-500">@item.TeamMembers</td>
+                                        <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

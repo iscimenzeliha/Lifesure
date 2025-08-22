@@ -1,0 +1,112 @@
+﻿
+@model Proje7MVC.Models.ViewModels.FaqViewModel
+@{
+    ViewBag.Title = "CreateFaq";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    @using (Html.BeginForm("CreateFaq", "Faq", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label>SORU PROMPT</label>
+                        @Html.TextBoxFor(x => x.QuestionPrompt, new { @class = "form-control" })
+                    </div>
+                        <div class="form-group">
+                            <label>SORU</label>
+                            @Html.TextBoxFor(x => x.Question, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>CEVAP</label>
+                            @Html.TextAreaFor(x => x.Answer, new { @class = "form-control", rows = 5 })
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" name="action" value="generateQuestion" class="btn btn-primary">Soru Oluştur</button>
+                            <button type="submit" name="action" value="generateAnswer" class="btn btn-warning">Cevap Oluştur</button>
+                            <button type="submit" name="action" value="save" class="btn btn-success">Ekle</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if (ViewBag.ApiMessage != null)
+{
+    var isError = ViewBag.IsError != null && (bool)ViewBag.IsError;
+    var alertClass = isError ? "alert-danger" : "alert-success";
+
+    <div class="alert @alertClass mt-2">
+        @Html.Raw(ViewBag.ApiMessage)
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(Model?.Question) && !string.IsNullOrEmpty(Model?.Answer))
+{
+    <section id="content-types">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card collapse-icon accordion-icon-rotate">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="accordion" id="cardAccordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                         aria-expanded="false" aria-controls="collapseOne" role="button">
+                                        <span class="collapsed collapse-title"><i class="bi bi-question-circle me-2"></i> @Model.Question</span>
+                                    </div>
+                                    <div id="collapseOne" class="collapse pt-1" aria-labelledby="headingOne"
+                                         data-parent="#cardAccordion">
+                                        <div class="card-body">
+                                            <i class="bi bi-chat-left-text me-2 text-primary"></i> @Model.Answer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section id="content-types">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card collapse-icon accordion-icon-rotate">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="accordion" id="cardAccordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                         aria-expanded="false" aria-controls="collapseOne" role="button">
+                                        <span class="collapsed collapse-title"><i class="bi bi-question-circle me-2"></i> Soru Bölümü</span>
+                                    </div>
+                                    <div id="collapseOne" class="collapse pt-1" aria-labelledby="headingOne"
+                                         data-parent="#cardAccordion">
+                                        <div class="card-body">
+                                            <i class="bi bi-chat-left-text me-2 text-primary"></i> Cevap Bölümü
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+}

@@ -1,0 +1,47 @@
+﻿﻿@model List<Proje7MVC.Models.DataModels.Sliders>
+
+@{
+    ViewBag.Title = "SliderList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3>İçerik Sayfası</h3>
+<div class="row" id="basic-table">
+    <div class="col-12 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Alt Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Image URL</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-bold-500">@item.SliderId</td>
+                                        <td class="text-bold-500">@item.Title</td>
+                                        <td class="text-bold-500">@item.SubTitle</td>
+                                        <td class="text-bold-500">@item.Description</td>
+                                        <td class="text-bold-500">@item.ImageUrl</td>
+                                        <td><a href="/Slider/DeleteSlider/@item.SliderId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Slider/UpdateSlider/@item.SliderId" class="btn btn-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Slider/CreateSlider" class="btn btn-primary">Yeni İçerik Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

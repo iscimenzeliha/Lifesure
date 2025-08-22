@@ -1,0 +1,40 @@
+﻿﻿@model  Proje7MVC.Models.DataModels.Testimonials
+
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>GÜNCELLE</h2>
+<section>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <form method="post">
+                        <input type="hidden" name="TestimonialId" value="@Model.TestimonialId" />
+                        <div class="form-group">
+                            <label>Adı</label>
+                            <input type="text" class="form-control" name="NameSurname" value="@Model.NameSurname">
+                        </div>
+                        <div class="form-group">
+                            <label>Meslek</label>
+                            <input type="text" class="form-control" name="Profession" value="@Model.Profession">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <input type="text" class="form-control" name="Description" value="@Model.Description">
+                        </div>
+                        <div class="form-group">
+                            <label>Image URL</label>
+                            <input type="text" class="form-control" name="ImageUrl" value="@Model.ImageUrl">
+                        </div>
+                        <button class="btn btn-primary">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,51 @@
+﻿﻿@model List<Proje7MVC.Models.DataModels.Services>
+
+@{
+    ViewBag.Title = "ServiceList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h3>Hizmetler</h3>
+<div class="row" id="basic-table">
+    <div class="col-12 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Image URL</th>
+                                    <th>Icon</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-bold-500">@item.ServiceId</td>
+                                        <td class="text-bold-500">@item.Title</td>
+                                        <td class="text-bold-500">@item.Description</td>
+                                        <td class="text-bold-500">@item.ImageUrl</td>
+                                        <td class="text-bold-500">@item.Icon</td>
+
+                                        <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Service/CreateService" class="btn btn-primary">Yeni hizmet Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

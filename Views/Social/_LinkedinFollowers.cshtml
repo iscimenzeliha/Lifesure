@@ -1,0 +1,7 @@
+﻿<div id="linkedin-followers">Yükleniyor...</div>
+
+<script>
+$.get('@Url.Action("GetLinkedinFollowers", "Social")', function(data){
+    $('#linkedin-followers').text(data + " takipçi");
+});
+</script>
