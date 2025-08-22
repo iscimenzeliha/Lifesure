@@ -69,3 +69,11 @@ LifeSure, .NET MVC 4.7.2 ve Entity Framework (DB-First) mimarisiyle geliştirile
 | 📲 Instagram  API | Takipçi bilgisi çekme (RapidAPI) |
 | 👨‍💻 C# | Backend geliştirme dili |
 
+### ⚙️ Admin Paneli
+
+![Admin Paneli 1](Images/Ekran görüntüsü 2025-08-16 184926.png)
+![Admin Paneli 2](Images/Ekran görüntüsü 2025-08-16 185543.png)
+![Admin Paneli 3](Images/Ekran görüntüsü 2025-08-16 185656.png)
+![Admin Paneli 3](Images/Ekran görüntüsü 2025-08-16 191718.png)
+
+
